@@ -584,7 +584,7 @@ final class GoogleMapController
 
   @Override
   public void onActivityResumed(Activity activity) {
-    if (disposed || activity.hashCode() != registrarActivityHashCode) {
+    if (disposed || activity.hashCode() != getActivityHashCode()) {
       return;
     }
     mapView.onResume();
